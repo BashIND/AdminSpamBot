@@ -39,7 +39,7 @@ async def justspam(SpamX: Client, e: Message):
     user = e.from_user
     chat_id = e.chat.id
     chat_member = SpamX.get_chat_member(chat_id, user.id)
-       if len(Rizoel) == 2:
+       len(Rizoel) == 2:
        counts = int(Rizoel[0])
        spam_text = str(Rizoel [1])
        await start_spam(SpamX, e, counts, spam_text)
