@@ -6,7 +6,7 @@ from random import choice
 from .. import handler, Sudos, LOGS_CHANNEL
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired
-from pyrogram.types import ChatPermissions, ChatPrivileges, Message
+from pyrogram.types import ChatPermissions, ChatMember, ChatPrivileges, Message
 
 from RiZoeLX.data import spam_usage
 from RiZoeLX import res_grps, res_devs
