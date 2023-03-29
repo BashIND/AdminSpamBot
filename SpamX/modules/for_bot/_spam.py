@@ -12,7 +12,7 @@ from RiZoeLX import res_grps, res_devs
 from RiZoeLX.functions import start_spam, start_dspam, start_pspam
 
 
-@Client.on_message(filters.user(Sudos) & filters.command(["delayspam"], prefixes=handler))
+@Client.on_message(filters.group & filters.admin & filters.command(["delayspam"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["delayspam"], prefixes=handler))
 async def delayspam(SpamX: Client, e: Message): 
     usage = spam_usage.delayspam
@@ -53,7 +53,7 @@ async def pornspam(SpamX: Client, e: Message):
          await e.reply_text("Gime Counts")
 
 
-@Client.on_message(filters.user(Sudos) & filters.command(["spam", "bigspam"], prefixes=handler))
+@Client.on_message(filters.group & filters.admin & filters.command(["spam", "bigspam"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["spam", "bigspam"], prefixes=handler))
 async def justspam(SpamX: Client, e: Message):
     usage = spam_usage.spam
