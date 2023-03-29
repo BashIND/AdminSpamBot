@@ -36,7 +36,8 @@ async def pornspam(SpamX: Client, e: Message):
 async def justspam(SpamX: Client, e: Message):
     usage = spam_usage.spam
     Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
-    if len(Rizoel) == 2:
+       if client.is_user_admin(message.chat.id, message.from_user.id):
+       len(Rizoel) == 2:
        counts = int(Rizoel[0])
        spam_text = str(Rizoel [1])
        await start_spam(SpamX, e, counts, spam_text)
