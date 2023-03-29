@@ -34,7 +34,6 @@ async def pornspam(SpamX: Client, e: Message):
 @Client.on_message(filters.group & filters.command(["spam", "bigspam"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["spam", "bigspam"], prefixes=handler))
 async def justspam(SpamX: Client, e: Message):
-    if client.is_user_admin(message.chat.id, message.from_user.id):
     usage = spam_usage.spam
     Rizoel = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     if len(Rizoel) == 2:
